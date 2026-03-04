@@ -38,8 +38,8 @@ import org.lsposed.lspd.util.Utils.Log;
 
 public class BridgeService {
     private static final int TRANSACTION_CODE = ('_' << 24) | ('L' << 16) | ('S' << 8) | 'P';
-    private static final String DESCRIPTOR = "LSPosed";
-    protected static final String TAG = "LSPosed-Bridge";
+    private static final String DESCRIPTOR = "FSPosed";
+    protected static final String TAG = "FSPosed-Bridge";
 
     enum ACTION {
         ACTION_UNKNOWN,

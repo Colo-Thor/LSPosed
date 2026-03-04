@@ -1,6 +1,6 @@
 [submodule "external/lsplant"]
 	path = external/lsplant
-	url = https://github.com/JingMatrix/LSPlant.git
+	url = https://github.com/Colo-Thor/LSPlant.git
 [submodule "external/dobby"]
 	path = external/dobby
 	url = https://github.com/JingMatrix/Dobby.git
@@ -12,7 +12,7 @@
 	url = https://github.com/tukaani-project/xz-embedded.git
 [submodule "external/lsplt"]
 	path = external/lsplt
-	url = https://github.com/JingMatrix/LSPlt
+	url = https://github.com/Colo-Thor/LSPlt
 [submodule "services/libxposed"]
 	path = services/libxposed
 	url = https://github.com/libxposed/service.git

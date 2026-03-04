@@ -48,7 +48,7 @@ import java.util.ArrayList;
 
 @RequiresApi(Build.VERSION_CODES.Q)
 public class Dex2OatService implements Runnable {
-    private static final String TAG = "LSPosedDex2Oat";
+    private static final String TAG = "FSPosedDex2Oat";
     private static final String WRAPPER32 = "bin/dex2oat32";
     private static final String WRAPPER64 = "bin/dex2oat64";
     private static final String HOOKER32 = "bin/liboat_hook32.so";

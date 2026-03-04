@@ -19,7 +19,7 @@ import io.github.libxposed.service.IXposedService;
 
 public class LSPInjectedModuleService extends ILSPInjectedModuleService.Stub {
 
-    private static final String TAG = "LSPosedInjectedModuleService";
+    private static final String TAG = "FSPosedInjectedModuleService";
 
     private final String mPackageName;
 

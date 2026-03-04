@@ -56,7 +56,7 @@ import java.util.concurrent.Executors;
 import hidden.HiddenApiBridge;
 
 public class ServiceManager {
-    public static final String TAG = "LSPosedService";
+    public static final String TAG = "FSPosedService";
     private static final File globalNamespace = new File("/proc/1/root");
     @SuppressWarnings("FieldCanBeLocal")
     private static LSPosedService mainService = null;

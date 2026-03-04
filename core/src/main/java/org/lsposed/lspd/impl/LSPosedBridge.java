@@ -16,7 +16,7 @@ import io.github.libxposed.api.errors.HookFailedError;
 
 public class LSPosedBridge {
 
-    private static final String TAG = "LSPosed-Bridge";
+    private static final String TAG = "FSPosed-Bridge";
 
     private static final String castException = "Return value's type from hook callback does not match the hooked method";
 

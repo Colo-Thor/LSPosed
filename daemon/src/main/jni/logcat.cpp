@@ -220,7 +220,8 @@ void Logcat::ProcessBuffer(struct log_msg *buf) {
 
     std::string_view tag(entry.tag, entry.tagLen);
     bool shortcut = false;
-    if (tag == "LSPosed-Bridge"sv || tag == "XSharedPreferences"sv || tag == "LSPosedContext")
+    if (tag == "LSPosed-Bridge"sv || tag == "XSharedPreferences"sv || tag == "LSPosedContext"
+        || tag == "FSPosed-Bridge"sv || tag == "FSPosedContext")
         [[unlikely]] {
         modules_print_count_ += PrintLogLine(entry, modules_file_.get());
         shortcut = true;
@@ -229,11 +230,12 @@ void Logcat::ProcessBuffer(struct log_msg *buf) {
                      tag == "APatchD"sv || tag == "Dobby"sv || tag.starts_with("dex2oat"sv) ||
                      tag == "KernelSU"sv || tag == "LSPlant"sv || tag == "LSPlt"sv ||
                      tag.starts_with("LSPosed"sv) || tag == "Magisk"sv || tag == "SELinux"sv ||
+                     tag == "FSPlant"sv || tag == "FSPlt"sv || tag.starts_with("FSPosed"sv) ||
                      tag == "TEESimulator"sv || tag.starts_with("Vector"sv) ||
                      tag.starts_with("zygisk"sv))) [[unlikely]] {
         verbose_print_count_ += PrintLogLine(entry, verbose_file_.get());
     }
-    if (entry.pid == my_pid_ && tag == "LSPosedLogcat"sv) [[unlikely]] {
+    if (entry.pid == my_pid_ && (tag == "LSPosedLogcat"sv || tag == "FSPosedLogcat"sv)) [[unlikely]] {
         std::string_view msg(entry.message, entry.messageLen);
         if (msg == "!!start_verbose!!"sv) {
             verbose_ = true;

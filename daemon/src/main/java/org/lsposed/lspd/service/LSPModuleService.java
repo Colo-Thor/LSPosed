@@ -49,7 +49,7 @@ import io.github.libxposed.service.IXposedService;
 
 public class LSPModuleService extends IXposedService.Stub {
 
-    private final static String TAG = "LSPosedModuleService";
+    private final static String TAG = "FSPosedModuleService";
 
     private final static Set<Integer> uidSet = ConcurrentHashMap.newKeySet();
     private final static Map<Module, LSPModuleService> serviceMap = Collections.synchronizedMap(new WeakHashMap<>());
